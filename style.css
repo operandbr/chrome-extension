@@ -1,0 +1,95 @@
+body {
+    background: #009fe2;
+}
+
+header {
+    display: block;
+    margin: 20px 0 20px 30px;
+    font-family: 'ProximaNova Semibold', sans-serif;
+    font-size: 20px;
+    color: #ffffff;
+    letter-spacing: -0.875px;
+    word-spacing: -1px;
+}
+
+header .version {
+    color: #96eff2;
+}
+
+label {
+    color: #afafaf;
+}
+
+#boxLogin {
+    background-color: #ffffff;
+    box-shadow: 1px 1px 25px -5px #666;
+    border-radius: 5px;
+    padding: 0;
+    min-width: 300px;
+    /* min-height: 100px; */
+    padding: 20px;
+}
+
+.container {
+    margin: 10px;
+}
+
+.form-control {
+    font-size: 16px;
+    background: #FFFEDF!important;
+    font-family: 'Proximanova Bold';
+    color: #333333;
+    display: block;
+    width: 100%;
+    line-height: 1.42857143;
+    background-image: none;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
+    box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
+    -webkit-transition: border-color ease-in-out .15s,-webkit-box-shadow ease-in-out .15s;
+    -o-transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
+    transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
+}
+.btn {
+    display: inline-block;
+    padding: 6px 12px;
+    margin-bottom: 0;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1.42857143;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    -ms-touch-action: manipulation;
+    touch-action: manipulation;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    background-image: none;
+    border: 1px solid transparent;
+    border-radius: 4px;
+}
+
+.btn.link {
+    color: #777;
+    text-decoration: none;
+    cursor: pointer;
+}
+.btn.link:hover {
+    text-decoration: underline;
+}
+
+.btn.success {
+    width: 120px;
+    background: #36C979;
+    border-color: #36C979;
+    font-size: 18px;
+    font-family: "ProximaNova Semibold", Helvetica, sans-serif !important;
+}
+
+#btn-login {
+    color: #ffffff;
+}

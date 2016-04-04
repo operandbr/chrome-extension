@@ -1,0 +1,82 @@
+body {
+	width: 300px;
+	height: 200px !important;
+}
+
+header {
+	background: #f7f7f7;
+	margin: -10px;
+	padding: 10px;
+}
+
+header label {
+	margin: 25px 0 25px 20px;	
+	color: #9c9b9b;
+}
+
+.list {
+	margin: 10px -10px 0 -10px;
+}
+
+.item {
+	padding: 10px 20px;
+	width: 100%;
+	border-top: 1px solid #ccc;
+	cursor: pointer;
+}
+
+.item a {
+	text-decoration: none;
+}
+
+.item:hover {
+	background: rgba(192,192,192,.25);
+}
+
+.item .title {
+	color: #0578c8;
+}
+
+.item .description {
+	color: #7b7b7b;;
+}
+
+.more {
+	padding-top: 5px;
+	width: 100%;
+	text-align: center;
+}
+
+.more a {
+	color: #9c9b9b;
+	text-decoration: none;
+}
+
+.more a:hover {
+	text-decoration: underline;
+}
+
+.login-header {
+	background: #009fe2 !important;
+	width: 100%;
+	height: 100%;
+}
+.login-title {
+	display: block;
+    margin: 20px 0 20px 30px;
+    font-family: 'ProximaNova Semibold', sans-serif;
+    font-size: 20px;
+    color: #ffffff;
+    letter-spacing: -0.875px;
+    word-spacing: -1px;
+}
+.login-title .version {
+    color: #96eff2;
+}
+
+.login-description {
+	margin-top: 30px;
+	font-size: 16px;
+	font-family: 'ProximaNova', Helvetica, sans-serif;
+	color: #5a5a5a;
+}
