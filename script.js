@@ -2,15 +2,14 @@
 
     window.onload = function() {
         refresh();
-        notification();
     };
 
     setInterval(function() {
         refresh();
-    }, 5000);
+    }, 100000);
 
+    var linkUrl = 'https://app2.agenciasys.com/';
     var refresh = function() {
-        var linkUrl = 'http://192.168.100.253:8030/';
         var xhttp = new XMLHttpRequest();
 
         xhttp.onreadystatechange = function() {
@@ -28,13 +27,17 @@
         });
     };
 
-    var notification = function() {
-        var notif = webkitNotifications.createNotification(
-            'favicon-64.png', // icon url - can be relative
-            'Hello!', // notification title
-            'Lorem ipsum...' // notification body text
-        );
-        notif.show();
-    };
+    var notifyMe = function(sTitle, sBody, sTag) {
+        if ("Notification" in window) {
+            if (Notification.permission === "granted") {
+                var notification =  new Notification(sTitle, {
+                        icon: 'img/favicon-96.png',
+                        body: sBody,
+                        tag: sTag
+                    });
+                
+            }
+        }
+    }
 
 })(window, document);
