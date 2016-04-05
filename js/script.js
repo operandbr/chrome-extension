@@ -8,7 +8,7 @@
         refresh();
     }, 10000);
 
-    var linkUrl = 'https://app2.agenciasys.com/';
+    var linkUrl = 'https://sol:8030/';
     var refresh = function() {
         var xhttp = new XMLHttpRequest();
 
@@ -25,7 +25,9 @@
         chrome.browserAction.setBadgeText({
             text: json.length.toString()
         });
-        chrome.browserAction.setBadgeBackgroundColor({color: "#FF0000"});
+        chrome.browserAction.setBadgeBackgroundColor({
+            color: "#FF0000"
+        });
         verifyStorage(json);
     };
 
@@ -40,9 +42,9 @@
                 for (var i = 0; i < arrData.length; i++) {
                     if (arrTask.Tasks.indexOf(arrData[i]) === -1) {
                         var body = json[i].Tasks.sTask;
-                        var description = 'Job: ' + json[i].ViewCmpRelatedDocuments.sDocumentNumber + ' '+ json[i].ViewCmpRelatedDocuments.sDocument;
+                        var description = 'Job: ' + json[i].ViewCmpRelatedDocuments.sDocumentNumber + ' ' + json[i].ViewCmpRelatedDocuments.sDocument;
 
-                        notifyMe('Nova Tarefa', body +'\n'+ description, 'task_'+arrData[i], linkUrl + json[i].Tasks.sDoc + '/' + json[i].Tasks.iDoc);
+                        notifyMe('Nova Tarefa', body + '\n' + description, 'task_' + arrData[i], linkUrl + json[i].Tasks.sDoc + '/' + json[i].Tasks.iDoc);
                         delete arrTask[arrTask.Tasks.indexOf(arrData[i])];
                     }
                 }
@@ -52,25 +54,27 @@
     };
 
     var addOnStorage = function(data) {
-        chrome.storage.local.set({'Tasks': data});
+        chrome.storage.local.set({
+            'Tasks': data
+        });
     };
 
     var notifyMe = function(sTitle, sBody, sTag, sUrl) {
         if ("Notification" in window) {
             if (Notification.permission === "granted") {
-                var notification =  new Notification(sTitle, {
-                        icon: 'img/favicon-96.png',
-                        body: sBody,
-                        tag: sTag
-                    });
+                var notification = new Notification(sTitle, {
+                    icon: 'img/favicon-96.png',
+                    body: sBody,
+                    tag: sTag
+                });
                 if (sUrl !== undefined) {
                     notification.onclick = function() {
-                      event.preventDefault();
-                      window.open(sUrl, '_blank');
-                      notification.close();
+                        event.preventDefault();
+                        window.open(sUrl, '_blank');
+                        notification.close();
                     }
                 }
-                
+
             }
         }
     }
