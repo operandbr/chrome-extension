@@ -1,6 +1,6 @@
 (function(window, document) {
 
-    var linkUrl = 'https://sol:8030/';
+    var linkUrl = 'http://sol:8030/';
 
     window.onload = function() {
 

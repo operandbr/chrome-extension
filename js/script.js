@@ -8,7 +8,7 @@
         refresh();
     }, 10000);
 
-    var linkUrl = 'https://sol:8030/';
+    var linkUrl = 'http://sol:8030/';
     var refresh = function() {
         var xhttp = new XMLHttpRequest();
 
