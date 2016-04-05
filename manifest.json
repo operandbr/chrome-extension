@@ -14,11 +14,15 @@
     },
     "permissions": [
         "https://app2.agenciasys.com/",
-        "notifications"
+        "notifications",
+        "storage"
     ],
     "web_accessible_resources": [
         "img/favicon-32.png"
     ],
+    "storage": {
+        "managed_schema": "schema.json"
+    },
     "icons": {
         "16": "img/favicon-16.png",
         "32": "img/favicon-32.png",
