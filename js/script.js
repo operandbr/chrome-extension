@@ -25,6 +25,7 @@
         chrome.browserAction.setBadgeText({
             text: json.length.toString()
         });
+        chrome.browserAction.setBadgeBackgroundColor({color: "#FF0000"});
         verifyStorage(json);
     };
 

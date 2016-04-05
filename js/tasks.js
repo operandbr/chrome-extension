@@ -10,8 +10,13 @@
             if (xhttp.readyState == 4 && xhttp.status == 200) {
                 try {
                     createList(JSON.parse(xhttp.responseText));
+                    chrome.browserAction.setBadgeBackgroundColor({color: "#FF0000"});
                 } catch (err) {
                     body.innerHTML = loginTab();
+                    chrome.browserAction.setBadgeText({
+                        text: '!'
+                    });
+                    chrome.browserAction.setBadgeBackgroundColor({color: "#FF9800"});
                 }
             }
         };
