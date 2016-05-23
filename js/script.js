@@ -8,7 +8,7 @@
         refresh();
     }, 10000);
 
-    var linkUrl = 'http://sol:8030/';
+    var linkUrl = 'https://app2.agenciasys.com/';
     var refresh = function() {
         var xhttp = new XMLHttpRequest();
 

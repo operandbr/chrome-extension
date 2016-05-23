@@ -1,6 +1,6 @@
 (function(window, document) {
 
-    var linkUrl = 'http://sol:8030/';
+    var linkUrl = 'https://app2.agenciasys.com/';
 
     window.onload = function() {
 
